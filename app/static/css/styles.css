@@ -1,0 +1,10 @@
+form.login {
+    width: 50%;
+    margin: 0 auto;
+}
+
+div.bottom {
+    height: 100%;
+    vertical-align: text-bottom;
+    margin-top: 12rem;
+}

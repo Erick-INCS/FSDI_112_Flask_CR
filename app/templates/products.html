@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <div class="container">
+        <div class="page-header">
+
+            {% for product in products %}
+                {% if product["active"] != 0 %}
+                    <div class="bs-example" data-example-id="media-alignment" style="margin-top:3rem;"> 
+                        <div class="media"> 
+                            <div class="media-left"> 
+                                <a href="#"> 
+                                <img alt="{{product["name"]}}" class="media-object" src="{{product['img']}}" style="width: 200px; height: 200px;"> </a> 
+                            </div> 
+                            <div class="media-body"> 
+                                <h3 class="media-heading">{{product["name"]}}</h5> 
+                                <h4 class="text-success">${{product["price"]}}</h4>
+                                <span class="label label-default">{{product["category"]}}</span>
+                                <a href="{{ url_for("get_product_detils", pid=product['id']) }}">Details</a>
+                                <br>
+                                <br>
+                            </div> 
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

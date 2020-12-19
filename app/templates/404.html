@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="page-header">
+            <h1>You're lost!</h1>
+            <h1>
+                . . .
+            </h1>
+
+            <img src="{{url_for("static", filename="404.jpeg")}}" alt="error"></img>
+        </div>
+
+    {% endblock %}
